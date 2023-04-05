@@ -1,0 +1,112 @@
+<div class="mat-elevation-z8">
+    <mat-card class="card_crud_services">
+        <mat-card-title class="card_title_form_services">Adicionar Novo Serviço</mat-card-title>
+        <mat-card-content>
+            <form [formGroup]="serviceForm" (ngSubmit)="submitServicesData()">
+                <div class="row">
+                    <div class="col-lg-5 col-md-12 col-sm-12" class="div_teste">
+
+                        <mat-tab-group class="mat-elevation-z8">
+
+                            <mat-tab class="tab_dados_básicos">
+                                <ng-template mat-tab-label>
+                                    <i class="material-icons" style="color: #000000;">save</i>
+                                    Dados Básicos do Serviço
+                                </ng-template>
+
+                                <div class="col-md-12 mb-3" class="tab_dados_básicos">
+                                    <label>Responsável Pelo Serviço</label>
+                                    <select class="form-select" formControlName="responsavel"
+                                        aria-label="Default select example">
+                                        <option value="{{Users.nome}}" *ngFor="let Users of User">{{Users.nome}}
+                                    </select>
+                                </div>
+
+                                <div class="col-md-12 mb-3" class="tab_dados_básicos">
+                                    <label>Empresa</label>
+                                    <select class="form-select" formControlName="empresa"
+                                        aria-label="Default select example">
+                                        <option value="{{Clients.nome}}" *ngFor="let Clients of Clients">
+                                            {{Clients.nome}}
+                                    </select>
+                                </div>
+
+                                <div class="col-md-12 mb-3" class="tab_dados_básicos">
+                                    <label for="start">Prazo para Realização:</label>
+                                    <br>
+                                    <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01"
+                                        max="2035-12-31" class="date_picker_native" formControlName="prazo_entrega">
+                                </div>
+
+                                <div class="col-md-12 mb-3" class="tab_dados_básicos">
+                                    <label>Preço (Somente quando necessário)</label>
+                                    <input type="text" formControlName="price_servico" id="priceDisabled"
+                                        class="form-control" />
+                                </div>
+
+                                <div class="col-md-12 mb-3" class="tab_dados_básicos">
+                                    <label>Instruções</label>
+                                    <textarea class="form-control" aria-label="With textarea"
+                                        formControlName="tipo_servico1"></textarea>
+                                </div>
+
+                            </mat-tab>
+
+                            <mat-tab class="tab_dados_básicos">
+                                <ng-template mat-tab-label>
+                                    <i class="material-icons" style="color: #000000;">list_alt</i>
+                                    Lista de Presença
+                                </ng-template>
+
+                                <mat-card-title>Dados Básicos da Lista</mat-card-title>
+                                <mat-card>
+                                    <div class="col-md-12 mb-3" class="tab_dados_básicos">
+                                        <label>Nome do Treinamento (Lista)</label>
+                                        <select class="form-select" formControlName="treinamento"
+                                            aria-label="Default select example">
+                                            <option value="{{Courses.nome_curso}}" *ngFor="let Courses of Courses">
+                                                {{Courses.nome_curso}}
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12 mb-3" class="tab_dados_básicos">
+                                        <label>Responsável Pelo Treinamento (Lista)</label>
+                                        <select class="form-select" formControlName="responsavel_treinamento"
+                                            aria-label="Default select example">
+                                            <option value="{{Users.nome}}" *ngFor="let Users of User">{{Users.nome}}
+                                        </select>
+                                    </div>
+                                </mat-card>
+
+                                <br>
+
+                                <mat-card>
+                                    <mat-card-title>Dados do(s) Aluno(s)</mat-card-title>
+                                </mat-card>
+
+                                <br>
+
+                            </mat-tab>
+
+                        </mat-tab-group>
+
+                        <br>
+
+                        <button mat-raised-button color="primary" type="submit" class="button_submit_form">
+                            <i class="material-icons" style="color: #fffefe">save</i>
+                            Salvar Serviço
+                        </button>
+
+                        <button mat-raised-button color="warn" type="button" (click)="resetForm()"
+                            class="button_reset_form">
+                            <i class="material-icons" style="color: #fffefe">restart_alt</i>
+                            Resetar Formulário</button>
+
+                        <button mat-raised-button type="button" class="button_return_form" routerLink="/services">
+                            <i class="material-icons" style="color: #000000">chevron_left</i>
+                            Voltar</button>
+                    </div>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

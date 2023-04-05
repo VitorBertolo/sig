@@ -1,0 +1,35 @@
+<div class="mat-elevation-z8">
+    <mat-card class="card_crud_users">
+        <mat-card-title class="card_title_form_users">Adicionar Novos Usuários</mat-card-title>
+        <mat-card-content>
+            <form [formGroup]="editForm" (ngSubmit)="updateForm()">
+                <div class="row">
+                    <div class="col-lg-5 col-md-12 col-sm-12" class="div_teste">
+
+                        <div class="col-md-12 mb-3" class="tab_dados_básicos">
+                            <label>Responsável Pelo Serviço</label>
+                            <select class="form-select" formControlName="responsavel"
+                                aria-label="Default select example">
+                                <option value="{{Users.nome}}" *ngFor="let Users of User">{{Users.nome}}
+                            </select>
+
+                        </div>
+
+                        <div class="form-group text-right">
+                            <button mat-raised-button color="primary" type="button" (click)="updateForm()"
+                                class="button_reset_form">
+                                <i class="material-icons" style="color: #fffefe">edit_note</i>
+                                Atualizar Serviço</button>
+
+                            <button mat-raised-button type="button" class="button_return_form" routerLink="/services">
+                                <i class="material-icons" style="color: #000000">chevron_left</i>
+                                Voltar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<br>
