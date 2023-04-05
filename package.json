@@ -29,7 +29,6 @@
     "express": "^4.18.2",
     "firebase": "^9.17.2",
     "jspdf": "^2.5.1",
-    "ng-print": "^1.0.1",
     "ngx-pagination": "^6.0.3",
     "ngx-print-element": "^2.0.18",
     "ngx-toastr": "^16.1.0",
