@@ -39,7 +39,6 @@ export class HeaderComponent {
   reload() {
     location.reload();
   }
-=======
-  
->>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
+
+
 }
