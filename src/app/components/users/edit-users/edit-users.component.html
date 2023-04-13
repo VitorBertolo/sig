@@ -6,6 +6,7 @@
                 <div class="row">
                     <div class="col-lg-5 col-md-12 col-sm-12" class="div_teste">
 
+
                         <div class="col-md-12 mb-3" class="teste">
                             <label>Nome</label>
                             <input type="text" formControlName="nome" class="form-control" required />
@@ -32,15 +33,24 @@
                         </div>
                         <br>
                         <div class="form-group text-right">
+
                             <button mat-raised-button color="primary" type="button" (click)="updateForm()"
                                 class="button_reset_form">
                                 <i class="material-icons" style="color: #fffefe">edit_note</i>
                                 Atualizar Usuário</button>
 
+                            <button mat-raised-button color="primary" type="button" (click)="openModal()"
+                                class="button_reset_form">
+                                <i class="material-icons" style="color: #fffefe">visibility</i>
+                                O que é uma ordem?</button>
+
                             <button mat-raised-button type="button" class="button_return_form" routerLink="/users">
                                 <i class="material-icons" style="color: #000000">chevron_left</i>
                                 Voltar</button>
                         </div>
+                        <br>
+                        <app-order-form></app-order-form>
+                        <br>
                     </div>
                 </div>
             </form>
@@ -49,3 +59,24 @@
 </div>
 
 <br>
+
+<mat-card>
+    <mat-card-title class="card_title_orders_users">Ordens para usuário: {{userId}}</mat-card-title>
+    <mat-card-content>
+        <table
+            class="table table-hover table-bordered table-responsive-sm table-responsive-md table-responsive-lg caption-top">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of orders$ | async">
+                    <td>{{order.id}}</td>
+                    <td>{{order.description}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </mat-card-content>
+</mat-card>

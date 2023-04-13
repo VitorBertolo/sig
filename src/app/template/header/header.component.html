@@ -1,59 +1,69 @@
 <mat-toolbar *ngIf="mostrarMenu" class="header mat-elevation-z4">
-    <span>
-        <a>
-            <img href="" class="logo" src="assets/img/logo.png" alt="logo">
-        </a>
-    </span>
 
     <span class="title-group">
 
-        <button mat-raised-button routerLink="start" matTooltip="INÍCIO">
+
+        <button mat-icon-button [matMenuTriggerFor]="menu" matTooltip="MENU">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" >
+
+            
+        <button mat-raised-button routerLink="start" matTooltip="INÍCIO" class="menu_botoes">
             <i class="material-icons" style="color: #212529">home</i>
         </button>
 
-        <button mat-raised-button routerLink="services" matTooltip="AGENDA">
-            <i class="material-icons" style="color: #212529">storefront</i>
-        </button>
+        
+            <button mat-raised-button routerLink="services" matTooltip="AGENDA" class="menu_botoes">
+                <i class="material-icons" style="color: #212529">storefront</i>
+            </button>
 
-        <button mat-raised-button routerLink="clients" matTooltip="CLIENTES">
-            <i class="material-icons" style="color: #212529">contact_mail</i>
-        </button>
-        <button mat-raised-button routerLink="courses" matTooltip="TREINAMENTOS">
-            <i class="material-icons" style="color: #212529">book </i>
-        </button>
+            <button mat-raised-button routerLink="clients" matTooltip="CLIENTES" class="menu_botoes">
+                <i class="material-icons" style="color: #212529">contact_mail</i>
+            </button>
 
-        <button mat-raised-button routerLink="courses" routerLink="users" matTooltip="USUÁRIOS">
-            <i class="material-icons" style="color: #212529">people </i>
-        </button>
+            <button mat-raised-button routerLink="courses" routerLink="users" matTooltip="USUÁRIOS" class="menu_botoes">
+                <i class="material-icons" style="color: #212529">people </i>
+            </button>
 
-        <button mat-raised-button routerLink="courses" routerLink="equipiments" matTooltip="EQUIPAMENTOS">
-            <i class="material-icons" style="color: #212529">construction </i>
-        </button>
+            <button mat-raised-button routerLink="courses" matTooltip="TREINAMENTOS" class="menu_botoes">
+                <i class="material-icons" style="color: #212529">book </i>
+            </button>
 
-        <button mat-raised-button routerLink="library" matTooltip="BIBLIOTECA">
-            <i class="material-icons" style="color: #212529">auto_stories</i>
-        </button>
+            <button mat-raised-button routerLink="courses" routerLink="equipiments" matTooltip="EQUIPAMENTOS" class="menu_botoes">
+                <i class="material-icons" style="color: #212529">construction </i>
+            </button>
 
-        <button mat-raised-button routerLink="budget" matTooltip="FINANCEIRO">
-            <i class="material-icons" style="color: #212529">payments</i>
-        </button>
+            <button mat-raised-button routerLink="library" matTooltip="BIBLIOTECA" class="menu_botoes">
+                <i class="material-icons" style="color: #212529">auto_stories</i>
+            </button>
 
-        <button mat-raised-button routerLink="courses" routerLink="contracts" matTooltip="CONTRATOS">
-            <i class="material-icons" style="color: #212529">gavel </i>
-        </button>
+            <button mat-raised-button routerLink="budget" matTooltip="FINANCEIRO" class="menu_botoes">
+                <i class="material-icons" style="color: #212529">payments</i>
+            </button>
 
-        <button mat-raised-button routerLink="courses" routerLink="parameters" matTooltip="PARÂMETROS">
-            <i class="material-icons" style="color: #212529">settings </i>
-        </button>
+            <button mat-raised-button routerLink="courses" routerLink="contracts" matTooltip="CONTRATOS" class="menu_botoes">
+                <i class="material-icons" style="color: #212529">gavel </i>
+            </button>
 
-        <button mat-raised-button routerLink="about" matTooltip="SOBRE">
-            <i class="material-icons" style="color: #212529">contact_support</i>
-        </button>
+            <button mat-raised-button routerLink="courses" routerLink="parameters" matTooltip="PARÂMETROS" class="menu_botoes">
+                <i class="material-icons" style="color: #212529">settings </i>
+            </button>
+
+            <button mat-raised-button routerLink="courses" routerLink="users" matTooltip="ENVIAR EMAIL" class="menu_botoes">
+                <i class="material-icons" style="color: #212529">send </i>
+            </button>
+            <button mat-raised-button routerLink="about" matTooltip="SOBRE" class="menu_botoes">
+                <i class="material-icons" style="color: #212529">contact_support</i>
+            </button>
+
+        </mat-menu>
+
     </span>
     <span class="espacamento-toolbar"></span>
 
     <!--AQUI COLOCAR O BOTÃO DE SAIR DO SISTEMA -->
-    <button mat-raised-button matTooltip="SAIR" color="white" class="sair">
+    <button mat-raised-button matTooltip="SAIR" color="white" class="sair" (click)="reload()">
         <i class="material-icons" style="color: #ffffff">logout</i></button>
 
 </mat-toolbar>

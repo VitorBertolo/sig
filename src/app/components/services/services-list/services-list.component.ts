@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { ServicesService } from '../shared/services.service';
 import { Services } from '../shared/services';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-services-list',
@@ -14,7 +15,8 @@ export class ServicesListComponent implements OnInit {
   hideWhenNoUsers: boolean = false;
   noData: boolean = false;
   preLoader: boolean = true;
-
+  sortBy = 'nome_tr';
+  searchTerm: string = '';
   constructor(public serviceApi: ServicesService, public toastr: ToastrService){}
 
   ngOnInit(){
@@ -52,7 +54,7 @@ export class ServicesListComponent implements OnInit {
       this.toastr.success('Usuário Deletado com Sucesso!!');
     }
   }
-
+  
 }
 
 

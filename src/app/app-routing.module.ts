@@ -27,6 +27,8 @@ import { StartComponent } from './pages/start/start.component';
 import { AddEquipimentsComponent } from './components/equipiments/add-equipiments/add-equipiments.component';
 import { EquipimentsListComponent } from './components/equipiments/equipiments-list/equipiments-list.component';
 import { EditEquipimentsComponent } from './components/equipiments/edit-equipiments/edit-equipiments.component';
+import { AuthGuard } from './pages/home/auth.guard';
+import { AddVisitsComponent } from './components/visits/add-visits/add-visits.component';
 
 const routes: Routes = [
   {
@@ -35,100 +37,130 @@ const routes: Routes = [
   },
   {
     path: "start",
-    component: StartComponent
+    component: StartComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: "about",
     component: AboutComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: "services",
-    component: ServicesCrudComponent
+    component: ServicesCrudComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: "clients",
-    component: ClientsCrudComponent
+    component: ClientsCrudComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: "courses",
-    component: CoursesCrudComponent
+    component: CoursesCrudComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: "parameters",
-    component: ParametersComponent
+    component: ParametersComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: "library",
-    component: LibraryComponent
+    component: LibraryComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: "budget",
-    component: BudgetComponent
+    component: BudgetComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: "users",
-    component: UsersCrudComponent
+    component: UsersCrudComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: "contracts",
-    component: ContractsCrudComponent
+    component: ContractsCrudComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: "equipiments",
-    component: EquipimentsCrudComponent 
+    component: EquipimentsCrudComponent ,
+    canActivate:[AuthGuard]
   },
   { 
     path: "register-users", 
-    component: AddUsersComponent
+    component: AddUsersComponent,
+    canActivate:[AuthGuard]
   },
   { 
     path: "view-users", 
-    component: UsersListComponent
+    component: UsersListComponent,
+    canActivate:[AuthGuard]
   },
   { path: "edit-users/:id", 
-    component: EditUsersComponent
+    component: EditUsersComponent,
+    canActivate:[AuthGuard]
   },
   { 
     path: "register-clients", 
-    component: AddClientsComponent
+    component: AddClientsComponent,
+    canActivate:[AuthGuard]
   },
   { 
     path: "view-clients", 
-    component: ClientsListComponent
+    component: ClientsListComponent,
+    canActivate:[AuthGuard]
   },
   { path: "edit-clients/:id", 
-    component: EditClientsComponent
+    component: EditClientsComponent,
+    canActivate:[AuthGuard]
   },
   { 
     path: "register-services", 
-    component: AddServicesComponent
+    component: AddServicesComponent,
+    canActivate:[AuthGuard]
   },
   { 
     path: "view-services", 
-    component: ServicesListComponent
+    component: ServicesListComponent,
+    canActivate:[AuthGuard]
   },
   { path: "edit-services/:id", 
-    component: EditServicesComponent
+    component: EditServicesComponent,
+    canActivate:[AuthGuard]
   },
   { 
     path: "register-courses", 
-    component: AddCoursesComponent
+    component: AddCoursesComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: "print-list-courses/:id",
-    component: PrintListCoursesComponent
+    component: PrintListCoursesComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: "register-equipiment",
-    component: AddEquipimentsComponent
+    component: AddEquipimentsComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: "view-equipiments",
-    component: EquipimentsListComponent
+    component: EquipimentsListComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: "edit-equipiments/:id",
-    component: EditEquipimentsComponent
+    component: EditEquipimentsComponent,
+    canActivate:[AuthGuard]
+  },
+  {
+    path: "visits",
+    component: AddVisitsComponent,
+    canActivate:[AuthGuard]
   }
 ];
 @NgModule({

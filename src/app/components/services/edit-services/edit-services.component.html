@@ -12,19 +12,21 @@
                                 aria-label="Default select example">
                                 <option value="{{Users.nome}}" *ngFor="let Users of User">{{Users.nome}}
                             </select>
-
                         </div>
 
                         <div class="form-group text-right">
                             <button mat-raised-button color="primary" type="button" (click)="updateForm()"
                                 class="button_reset_form">
                                 <i class="material-icons" style="color: #fffefe">edit_note</i>
-                                Atualizar Serviço</button>
+                                Atualizar Serviço
+                            </button>
 
                             <button mat-raised-button type="button" class="button_return_form" routerLink="/services">
                                 <i class="material-icons" style="color: #000000">chevron_left</i>
-                                Voltar</button>
+                                Voltar
+                            </button>
                         </div>
+                        
                     </div>
                 </div>
             </form>

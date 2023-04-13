@@ -51,3 +51,13 @@ i {
 .mat-menu-item{
     margin: 0px;   
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  margin-right: 20px;
+}

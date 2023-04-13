@@ -1,4 +1,6 @@
+import { VisitsService } from './../shared/visits.service';
 import { Component } from '@angular/core';
+import { Visits } from '../shared/visits';
 
 @Component({
   selector: 'app-add-visits',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AddVisitsComponent {
 
+  constructor(private VisitsService: VisitsService) {}
+
+
 }
+

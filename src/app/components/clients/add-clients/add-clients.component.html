@@ -16,23 +16,23 @@
 
                                 <div class="tab_dados_básicos">
                                     <div class="col-md-12 mb-3" class="teste">
-                                        <label><strong>Nome</strong></label>
+                                        <label><strong></strong><strong>Nome</strong></label>
                                         <input type="text" formControlName="nome" class="form-control">
                                     </div>
 
                                     <div class="col-md-12 mb-3" class="teste">
-                                        <label><strong>CNPJ</strong></label>
+                                        <label><strong></strong><strong>CNPJ</strong></label>
                                         <input type="text" formControlName="cnpj" class="form-control">
                                     </div>
 
                                     <div class="col-md-12 mb-3" class="teste">
-                                        <label><strong>Responsável Pela Empresa</strong></label>
+                                        <label><strong></strong><strong>Responsável Pela Empresa</strong></label>
                                         <input type="text" formControlName="responsavel_empresa" class="form-control"
                                         >
                                     </div>
 
                                     <div class="col-md-12 mb-3" class="teste">
-                                        <label>Responsável na Proseg</label>
+                                        <label><strong>Responsável na Proseg</strong></label>
                                         <select class="form-select" formControlName="responsavel_proseg"
                                             aria-label="Default select example">
                                             <option value="{{Users.nome}}" *ngFor="let Users of User">{{Users.nome}}
@@ -40,23 +40,22 @@
                                     </div>
 
                                     <div class="col-md-12 mb-3" class="teste">
-                                        <label>Telefone Fixo</label>
-                                        <input type="text" formControlName="telefone_fixo" class="form-control"
-                                        >
+                                        <label><strong>Telefone Fixo</strong></label>
+                                        <input type="text" formControlName="telefone_fixo" class="form-control" value="N/A">
                                     </div>
 
                                     <div class="col-md-12 mb-3" class="teste">
-                                        <label>Telefone Celular | Principal</label>
+                                        <label><strong>Telefone Celular | Principal</strong></label>
                                         <input type="text" formControlName="telefone1" class="form-control">
                                     </div>
 
                                     <div class="col-md-12 mb-3" class="teste">
-                                        <label>Telefone Celular | Secundário</label>
+                                        <label><strong>Telefone Celular | Secundário</strong></label>
                                         <input type="text" formControlName="telefone2" class="form-control">
                                     </div>
 
                                     <div class="col-md-12 mb-3" class="teste">
-                                        <label>E-mail</label>
+                                        <label><strong>E-mail</strong></label>
                                         <input type="text" formControlName="email" class="form-control">
                                     </div>
                                 </div>
@@ -70,36 +69,36 @@
 
                                 <div class="tab_dados_especificos">
                                     <div class="col-md-12 mb-3" class="teste">
-                                        <label>É cliente Mensal?</label>
+                                        <label><strong>É cliente Mensal?</strong></label>
                                         <input type="text" formControlName="mensal" class="form-control">
                                     </div>
 
                                     <div class="col-md-12 mb-3" class="teste">
-                                        <label>Periodicidade das Visitas:</label>
+                                        <label><strong>Periodicidade das Visitas:</strong></label>
                                         <input type="text" formControlName="periodicidade_visitas" class="form-control"
                                         >
                                     </div>
 
                                     <div class="col-md-12 mb-3" class="teste">
-                                        <label>Tipo de atendimento:</label>
+                                        <label><strong>Tipo de atendimento:</strong></label>
                                         <input type="text" formControlName="item_contrato" class="form-control"
                                         >
                                     </div>
 
                                     <div class="col-md-12 mb-3" class="teste">
-                                        <label>Validade de Procuração do E-social</label>
+                                        <label><strong>Validade de Procuração do E-social</strong></label>
                                         <input type="text" formControlName="validade_proc_esocial" class="form-control"
                                         >
                                     </div>
 
                                     <div class="col-md-12 mb-3" class="teste">
-                                        <label>Vigência do PGR</label>
+                                        <label><strong>Vigência do PGR</strong></label>
                                         <input type="text" formControlName="vigencia_pgr" class="form-control"
                                         >
                                     </div>
 
                                     <div class="col-md-12 mb-3" class="teste">
-                                        <label>Validade da ART</label>
+                                        <label><strong>Validade da ART</strong></label>
                                         <input type="text" formControlName="validade_art" class="form-control"
                                         >
                                     </div>
@@ -114,32 +113,32 @@
 
                                 <div class="tab_dados_endereco">
                                     <div class="col-md-12 mb-3" class="teste">
-                                        <label>CEP</label>
+                                        <label><strong>CEP</strong></label>
                                         <input type="text" formControlName="cep" class="form-control">
                                     </div>
 
                                     <div class="col-md-12 mb-3" class="teste">
-                                        <label>Bairro</label>
+                                        <label><strong>Bairro</strong></label>
                                         <input type="text" formControlName="bairro" class="form-control">
                                     </div>
 
                                     <div class="col-md-12 mb-3" class="teste">
-                                        <label>Logradouro</label>
+                                        <label><strong>Logradouro</strong></label>
                                         <input type="text" formControlName="logradouro" class="form-control">
                                     </div>
 
                                     <div class="col-md-12 mb-3" class="teste">
-                                        <label>Número</label>
+                                        <label><strong>Número</strong></label>
                                         <input type="text" formControlName="numero" class="form-control">
                                     </div>
 
                                     <div class="col-md-12 mb-3" class="teste">
-                                        <label>Cidade</label>
+                                        <label><strong>Cidade</strong></label>
                                         <input type="text" formControlName="cidade" class="form-control">
                                     </div>
 
                                     <div class="col-md-12 mb-3" class="teste">
-                                        <label>Estado</label>
+                                        <label><strong>Estado</strong></label>
                                         <input type="text" formControlName="uf" class="form-control">
                                     </div>
                                 </div>

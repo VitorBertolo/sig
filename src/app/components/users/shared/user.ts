@@ -3,6 +3,11 @@ export interface User {
   nome: string;
   email: string;
   senha: string;
-  telefone: number;
+  telefone: string;
   funcao: string;
+}
+
+export interface Order {
+  id: string;
+  description:string;
 }

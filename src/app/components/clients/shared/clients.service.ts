@@ -1,13 +1,13 @@
-import { Clients } from './clients';
-import { Injectable } from '@angular/core';
+import { Clients } from "./clients";
+import { Injectable } from "@angular/core";
 import {
   AngularFireDatabase,
   AngularFireList,
   AngularFireObject,
-} from '@angular/fire/compat/database';
+} from "@angular/fire/compat/database";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class ClientsService {
   clientsRef!: AngularFireList<any>;
@@ -42,13 +42,13 @@ export class ClientsService {
 
   // Fetch Single Student Object
   GetClient(id: string) {
-    this.clientRef = this.db.object('clients-list/' + id);
+    this.clientRef = this.db.object("clients-list/" + id);
     return this.clientRef;
   }
 
   // Fetch Students List
   GetClientsList() {
-    this.clientsRef = this.db.list('clients-list');
+    this.clientsRef = this.db.list("clients-list");
     return this.clientsRef;
   }
 
@@ -80,7 +80,7 @@ export class ClientsService {
 
   // Delete Student Object
   DeleteClient(id: string) {
-    this.clientRef = this.db.object('clients-list/' + id);
+    this.clientRef = this.db.object("clients-list/" + id);
     this.clientRef.remove();
   }
 }

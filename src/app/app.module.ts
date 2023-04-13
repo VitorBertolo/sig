@@ -113,6 +113,17 @@ import {MatNativeDateModule} from '@angular/material/core';
 import { AddEquipimentsCalibrationComponent } from './components/equipiments_calibration/add-equipiments-calibration/add-equipiments-calibration.component';
 import { EquipimentsCalibrationListComponent } from './components/equipiments_calibration/equipiments-calibration-list/equipiments-calibration-list.component';
 import { EditEquipimentsCalibrationComponent } from './components/equipiments_calibration/edit-equipiments-calibration/edit-equipiments-calibration.component';
+import { ModalStartComponent } from './pages/start/modal-start/modal-start.component';
+import { AuthGuard } from './pages/home/auth.guard';
+import { AuthService } from './pages/home/auth.service';
+import { OrderFormComponent } from './components/users/order-form/order-form.component';
+import { ModalOrderComponent } from './components/users/edit-users/modal-order/modal-order.component';
+import { CpfPipe } from './components/clients/clients-list/cpf.pipe';
+import { CnpjPipe } from './components/clients/clients-list/cnpj.pipe';
+import { TelefonePipe } from './components/clients/clients-list/telefone.pipe';
+import { DataPipe } from './components/services/services-list/data.pipe';
+import { FilterPipe } from './components/services/services-list/filter.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -178,6 +189,14 @@ import { EditEquipimentsCalibrationComponent } from './components/equipiments_ca
     AddEquipimentsCalibrationComponent,
     EquipimentsCalibrationListComponent,
     EditEquipimentsCalibrationComponent,
+    ModalStartComponent,
+    OrderFormComponent,
+    ModalOrderComponent,
+    CpfPipe,
+    CnpjPipe,
+    TelefonePipe,
+    DataPipe,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
@@ -231,7 +250,7 @@ import { EditEquipimentsCalibrationComponent } from './components/equipiments_ca
     FormsModule,
     MatNativeDateModule
   ],
-  providers: [],
+  providers: [AuthService,AuthGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

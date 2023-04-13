@@ -1,6 +1,6 @@
 <br>
 <div class="pricing-header mx-auto">
-    <div class="table-responsive" *ngIf="hideWhenNoUsers">
+    <div class="table-responsive" *ngIf="hideWhenNoUsers" id="htmlData">
         <table
             class="table table-hover table-bordered table-responsive-sm table-responsive-md table-responsive-lg caption-top">
             <thead class="table-dark">
@@ -16,9 +16,9 @@
             <tbody>
                 <tr *ngFor="let user of User | paginate : { itemsPerPage: 10  , currentPage: p }; let i = index">
                     <th scope="row">{{ user.$key }}</th>
-                    <td >{{ user.nome }}</td>
+                    <td>{{ user.nome }}</td>
                     <td>{{ user.email }}</td>
-                    <td>{{ user.telefone }}</td>   
+                    <td>{{ user.telefone | telefone}}</td>
                     <td>{{ user.funcao }}</td>
                     <td class="text-center action-block table-warning">
 

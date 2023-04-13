@@ -263,4 +263,5 @@ export class ServicesService {
     this.serviceRef = this.db.object('services-list/' + id);
     this.serviceRef.remove();
   }
+  
 }

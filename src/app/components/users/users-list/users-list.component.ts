@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../shared/user.service';
 import { User } from '../shared/user';
 import { ToastrService } from 'ngx-toastr';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
+import * as XLSX from 'xlsx';
 
 @Component({
   selector: 'app-users-list',
@@ -52,5 +55,20 @@ export class UsersListComponent implements OnInit  {
       this.toastr.success('Usuário Deletado com Sucesso!!');
     }
   }
-  
+
+  public openPDF(): void {
+    let DATA: any = document.getElementById('htmlData');
+    html2canvas(DATA).then((canvas) => {
+      let fileWidth = 208;
+      let fileHeight = (canvas.height * fileWidth) / canvas.width;
+      const FILEURI = canvas.toDataURL('image/png');
+      let PDF = new jsPDF('p', 'mm', 'a4');
+      let position = 0;
+      PDF.addImage(FILEURI, 'PNG', 0, position, fileWidth, fileHeight);
+      PDF.save('Lista_Avulsa.pdf');
+    });
+  }
+
+
 }
+

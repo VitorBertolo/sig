@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
-import { AuthService } from 'src/app/pages/home/auth.service';
-import { Router } from '@angular/router';
+import { Component, ViewChild } from "@angular/core";
+import { AuthService } from "src/app/pages/home/auth.service";
+import { Router } from "@angular/router";
+import { MatSidenav } from "@angular/material/sidenav";
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: "app-header",
+  templateUrl: "./header.component.html",
+  styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent {
   mostrarMenu: boolean = false;
@@ -16,5 +17,14 @@ export class HeaderComponent {
       (mostrar) => (this.mostrarMenu = mostrar)
     );
   }
-  
+
+  menuOpen = false; // define the menuOpen property here
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  reload() {
+    location.reload();
+  }
 }
