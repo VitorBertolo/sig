@@ -2,12 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../shared/user.service';
 import { User } from '../shared/user';
 import { ToastrService } from 'ngx-toastr';
-<<<<<<< HEAD
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import * as XLSX from 'xlsx';
-=======
->>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
 
 @Component({
   selector: 'app-users-list',
@@ -58,7 +55,6 @@ export class UsersListComponent implements OnInit  {
       this.toastr.success('Usuário Deletado com Sucesso!!');
     }
   }
-<<<<<<< HEAD
 
   public openPDF(): void {
     let DATA: any = document.getElementById('htmlData');
@@ -76,7 +72,3 @@ export class UsersListComponent implements OnInit  {
 
 }
 
-=======
-  
-}
->>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8

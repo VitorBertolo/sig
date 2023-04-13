@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
@@ -64,14 +63,4 @@ export class VisitsService {
     const commentRef = this.db.object(`visits/${visitsId}/comments/${commentId}`);
     return commentRef.remove();
   }
-=======
-import { Injectable } from '@angular/core';
-
-@Injectable({
-  providedIn: 'root'
-})
-export class VisitsService {
-
-  constructor() { }
->>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
 }
