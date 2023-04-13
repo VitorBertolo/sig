@@ -1,22 +1,35 @@
 import { Injectable } from '@angular/core';
+<<<<<<< HEAD
 import { User, Order } from './user';
+=======
+import { User } from './user';
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
 import {
   AngularFireDatabase,
   AngularFireList,
   AngularFireObject,
 } from '@angular/fire/compat/database';
+<<<<<<< HEAD
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { map } from 'rxjs';
+=======
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
 
 @Injectable({
   providedIn: 'root',
 })
 export class UsersService {
+<<<<<<< HEAD
 
   usersRef!: AngularFireList<any>;
   userRef!: AngularFireObject<any>;
   constructor(private db: AngularFireDatabase,private afs: AngularFirestore) {
   }
+=======
+  usersRef!: AngularFireList<any>;
+  userRef!: AngularFireObject<any>;
+  constructor(private db: AngularFireDatabase) {}
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
 
   // Create Users
   AddUser(user: User) {
@@ -57,6 +70,7 @@ export class UsersService {
     this.userRef = this.db.object('users-list/' + id);
     this.userRef.remove();
   }
+<<<<<<< HEAD
 
   // Add Order for User
   addOrder(userId: string, order: Order) {
@@ -92,3 +106,6 @@ export class UsersService {
 
 }
 
+=======
+}
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8

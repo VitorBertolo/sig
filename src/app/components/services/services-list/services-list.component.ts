@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { ServicesService } from '../shared/services.service';
 import { Services } from '../shared/services';
+<<<<<<< HEAD
 import { FormsModule } from '@angular/forms';
+=======
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
 
 @Component({
   selector: 'app-services-list',
@@ -15,8 +18,12 @@ export class ServicesListComponent implements OnInit {
   hideWhenNoUsers: boolean = false;
   noData: boolean = false;
   preLoader: boolean = true;
+<<<<<<< HEAD
   sortBy = 'nome_tr';
   searchTerm: string = '';
+=======
+
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
   constructor(public serviceApi: ServicesService, public toastr: ToastrService){}
 
   ngOnInit(){
@@ -54,7 +61,11 @@ export class ServicesListComponent implements OnInit {
       this.toastr.success('Usuário Deletado com Sucesso!!');
     }
   }
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
 }
 
 

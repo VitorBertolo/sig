@@ -6,6 +6,7 @@
                 <div class="row">
                     <div class="col-lg-5 col-md-12 col-sm-12" class="div_teste">
 
+<<<<<<< HEAD
                         <ng-template mat-tab-label>
                             <i class="material-icons" style="color: #000000;">save</i>
                             Dados Básicos do Serviço
@@ -91,6 +92,60 @@
                                     </mat-panel-title>
 
                                 </mat-expansion-panel-header>
+=======
+                        <mat-tab-group class="mat-elevation-z8">
+
+                            <mat-tab class="tab_dados_básicos">
+                                <ng-template mat-tab-label>
+                                    <i class="material-icons" style="color: #000000;">save</i>
+                                    Dados Básicos do Serviço
+                                </ng-template>
+
+                                <div class="col-md-12 mb-3" class="tab_dados_básicos">
+                                    <label>Responsável Pelo Serviço</label>
+                                    <select class="form-select" formControlName="responsavel"
+                                        aria-label="Default select example">
+                                        <option value="{{Users.nome}}" *ngFor="let Users of User">{{Users.nome}}
+                                    </select>
+                                </div>
+
+                                <div class="col-md-12 mb-3" class="tab_dados_básicos">
+                                    <label>Empresa</label>
+                                    <select class="form-select" formControlName="empresa"
+                                        aria-label="Default select example">
+                                        <option value="{{Clients.nome}}" *ngFor="let Clients of Clients">
+                                            {{Clients.nome}}
+                                    </select>
+                                </div>
+
+                                <div class="col-md-12 mb-3" class="tab_dados_básicos">
+                                    <label for="start">Prazo para Realização:</label>
+                                    <br>
+                                    <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01"
+                                        max="2035-12-31" class="date_picker_native" formControlName="prazo_entrega">
+                                </div>
+
+                                <div class="col-md-12 mb-3" class="tab_dados_básicos">
+                                    <label>Preço (Somente quando necessário)</label>
+                                    <input type="text" formControlName="price_servico" id="priceDisabled"
+                                        class="form-control" />
+                                </div>
+
+                                <div class="col-md-12 mb-3" class="tab_dados_básicos">
+                                    <label>Instruções</label>
+                                    <textarea class="form-control" aria-label="With textarea"
+                                        formControlName="tipo_servico1"></textarea>
+                                </div>
+
+                            </mat-tab>
+
+                            <mat-tab class="tab_dados_básicos">
+                                <ng-template mat-tab-label>
+                                    <i class="material-icons" style="color: #000000;">list_alt</i>
+                                    Lista de Presença
+                                </ng-template>
+
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
                                 <mat-card-title>Dados Básicos da Lista</mat-card-title>
                                 <mat-card>
                                     <div class="col-md-12 mb-3" class="tab_dados_básicos">
@@ -101,7 +156,10 @@
                                                 {{Courses.nome_curso}}
                                         </select>
                                     </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
                                     <div class="col-md-12 mb-3" class="tab_dados_básicos">
                                         <label>Responsável Pelo Treinamento (Lista)</label>
                                         <select class="form-select" formControlName="responsavel_treinamento"
@@ -109,11 +167,27 @@
                                             <option value="{{Users.nome}}" *ngFor="let Users of User">{{Users.nome}}
                                         </select>
                                     </div>
+<<<<<<< HEAD
 
                                 </mat-card>
                             </mat-expansion-panel>
 
                         </mat-accordion>
+=======
+                                </mat-card>
+
+                                <br>
+
+                                <mat-card>
+                                    <mat-card-title>Dados do(s) Aluno(s)</mat-card-title>
+                                </mat-card>
+
+                                <br>
+
+                            </mat-tab>
+
+                        </mat-tab-group>
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
 
                         <br>
 

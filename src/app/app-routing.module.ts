@@ -27,8 +27,11 @@ import { StartComponent } from './pages/start/start.component';
 import { AddEquipimentsComponent } from './components/equipiments/add-equipiments/add-equipiments.component';
 import { EquipimentsListComponent } from './components/equipiments/equipiments-list/equipiments-list.component';
 import { EditEquipimentsComponent } from './components/equipiments/edit-equipiments/edit-equipiments.component';
+<<<<<<< HEAD
 import { AuthGuard } from './pages/home/auth.guard';
 import { AddVisitsComponent } from './components/visits/add-visits/add-visits.component';
+=======
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
 
 const routes: Routes = [
   {
@@ -37,12 +40,17 @@ const routes: Routes = [
   },
   {
     path: "start",
+<<<<<<< HEAD
     component: StartComponent,
     canActivate:[AuthGuard]
+=======
+    component: StartComponent
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
   },
   {
     path: "about",
     component: AboutComponent,
+<<<<<<< HEAD
     canActivate:[AuthGuard]
   },
   {
@@ -161,6 +169,97 @@ const routes: Routes = [
     path: "visits",
     component: AddVisitsComponent,
     canActivate:[AuthGuard]
+=======
+  },
+  {
+    path: "services",
+    component: ServicesCrudComponent
+  },
+  {
+    path: "clients",
+    component: ClientsCrudComponent
+  },
+  {
+    path: "courses",
+    component: CoursesCrudComponent
+  },
+  {
+    path: "parameters",
+    component: ParametersComponent
+  },
+  {
+    path: "library",
+    component: LibraryComponent
+  },
+  {
+    path: "budget",
+    component: BudgetComponent
+  },
+  {
+    path: "users",
+    component: UsersCrudComponent
+  },
+  {
+    path: "contracts",
+    component: ContractsCrudComponent
+  },
+  {
+    path: "equipiments",
+    component: EquipimentsCrudComponent 
+  },
+  { 
+    path: "register-users", 
+    component: AddUsersComponent
+  },
+  { 
+    path: "view-users", 
+    component: UsersListComponent
+  },
+  { path: "edit-users/:id", 
+    component: EditUsersComponent
+  },
+  { 
+    path: "register-clients", 
+    component: AddClientsComponent
+  },
+  { 
+    path: "view-clients", 
+    component: ClientsListComponent
+  },
+  { path: "edit-clients/:id", 
+    component: EditClientsComponent
+  },
+  { 
+    path: "register-services", 
+    component: AddServicesComponent
+  },
+  { 
+    path: "view-services", 
+    component: ServicesListComponent
+  },
+  { path: "edit-services/:id", 
+    component: EditServicesComponent
+  },
+  { 
+    path: "register-courses", 
+    component: AddCoursesComponent
+  },
+  {
+    path: "print-list-courses/:id",
+    component: PrintListCoursesComponent
+  },
+  {
+    path: "register-equipiment",
+    component: AddEquipimentsComponent
+  },
+  {
+    path: "view-equipiments",
+    component: EquipimentsListComponent
+  },
+  {
+    path: "edit-equipiments/:id",
+    component: EditEquipimentsComponent
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
   }
 ];
 @NgModule({

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
@@ -34,5 +35,15 @@ export class StartComponent {
   openModal() {
     this.dialog.open(ModalStartComponent, { width: "1200px"});
   }
+=======
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-start',
+  templateUrl: './start.component.html',
+  styleUrls: ['./start.component.scss']
+})
+export class StartComponent {
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
 
 }

@@ -19,9 +19,15 @@
                 <tr *ngFor="let client of Client | paginate : { itemsPerPage: 5  , currentPage: p }; let i = index">
                     <th scope="row">{{ client.$key }}</th>
                     <td>{{ client.nome }}</td>
+<<<<<<< HEAD
                     <td>{{ client.cnpj | cnpj }}</td>
                     <td>{{ client.responsavel_proseg }}</td>
                     <td>{{ client.telefone1 | telefone}}</td>
+=======
+                    <td>{{ client.cnpj }}</td>
+                    <td>{{ client.responsavel_proseg }}</td>
+                    <td>{{ client.telefone1 }}</td>
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
                     <td>{{ client.email }}</td>
                     <td class="text-center action-block table-warning">
 

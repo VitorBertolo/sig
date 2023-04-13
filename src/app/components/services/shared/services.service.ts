@@ -263,5 +263,8 @@ export class ServicesService {
     this.serviceRef = this.db.object('services-list/' + id);
     this.serviceRef.remove();
   }
+<<<<<<< HEAD
   
+=======
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
 }

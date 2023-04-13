@@ -1,4 +1,5 @@
 <br>
+<<<<<<< HEAD
 
 <div class="pesquisa_table_service">
     <div class="col-md-6">
@@ -75,3 +76,52 @@
 
     </mat-card-content>
 </mat-card>
+=======
+<div class="pricing-header mx-auto">
+    <div class="table-responsive" *ngIf="hideWhenNoUsers">
+        <table
+            class="table table-hover table-bordered table-responsive-sm table-responsive-md table-responsive-lg caption-top">
+            <thead class="table-dark">
+                <tr class="tr_table">
+                    <th class="nome_tr">KEY/ID</th>
+                    <th class="nome_tr text-center">RESPONSÁVEL</th>
+                    <th class="nome_tr text-center">EMPRESA</th>
+                    <th class="nome_tr text-center">PRAZO</th>
+                    <th class="nome_tr text-center">AÇÕES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr
+                    *ngFor="let services of Services | paginate : { itemsPerPage: 8  , currentPage: p }; let i = index">
+                    <th scope="row">{{ services.$key }}</th>
+                    <td>{{ services.responsavel }}</td>
+                    <td>{{ services.empresa }}</td>
+                    <td>{{ services.prazo_entrega }}</td>
+
+                    <td class="text-center action-block table-warning">
+
+                        <button mat-mini-fab color="primary" routerLink="/edit-services/{{ services.$key }}"
+                            class="mat_button1" matTooltip="EDITAR SERVIÇO">
+                            <i class="material-icons" style="color: #ffffff">edit</i> </button>
+
+                        <button mat-mini-fab class="mat_button2" matTooltip="IMPRIMIR LISTA DE PRESENÇA">
+                            <i class="material-icons" style="color: #ffffff">picture_as_pdf</i> </button>
+
+                        <button mat-mini-fab class="mat_button3" matTooltip="IMPRIMIR CERTIFICADO(S)">
+                            <i class="material-icons" style="color: #ffffff">card_membership</i> </button>
+
+                        <button mat-mini-fab color="warn" (click)="deleteService(services)" class="mat_button4"
+                            matTooltip="DELETAR">
+                            <i class="material-icons" style="color: #ffffff">delete</i> </button>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div style="text-align: center;">
+        <pagination-controls (pageChange)="p = $event" previousLabel="Anterior"
+            nextLabel="Próxima"></pagination-controls>
+    </div>
+</div>
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8

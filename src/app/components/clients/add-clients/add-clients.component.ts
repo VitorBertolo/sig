@@ -43,6 +43,7 @@ export class AddClientsComponent implements OnInit {
       cnpj: [''],
       responsavel_empresa: [''],
       responsavel_proseg: [''],
+<<<<<<< HEAD
       telefone_fixo: ['N/A'],
       telefone1: [''],
       telefone2: [''],
@@ -53,12 +54,29 @@ export class AddClientsComponent implements OnInit {
       validade_proc_esocial: ['N/A'],
       vigencia_pgr: ['N/A'],
       validade_art: ['N/A'],
+=======
+      telefone_fixo: [''],
+      telefone1: [''],
+      telefone2: [''],
+      email: [''],
+      mensal: [''],
+      periodicidade_visitas: [''],
+      item_contrato: [''],
+      validade_proc_esocial: [''],
+      vigencia_pgr: [''],
+      validade_art: [''],
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
       cep: [''],
       bairro: [''],
       logradouro: [''],
       numero: [''],
+<<<<<<< HEAD
       cidade: ['Sinop'],
       uf: ['Mato Grosso'],
+=======
+      cidade: [''],
+      uf: [''],
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
     });
   }
 

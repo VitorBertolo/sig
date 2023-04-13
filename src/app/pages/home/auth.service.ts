@@ -27,6 +27,7 @@ export class AuthService {
       } else {
         this.usuarioAutenticado = false;
         this.mostrarMenuEmitter.emit(false);
+<<<<<<< HEAD
       } 
     }
   }
@@ -34,4 +35,9 @@ export class AuthService {
   usuarioEstaAutenticado(){
     return this.usuarioAutenticado
   }
+=======
+      }
+    }
+  }
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
 }

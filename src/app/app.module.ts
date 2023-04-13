@@ -113,6 +113,7 @@ import {MatNativeDateModule} from '@angular/material/core';
 import { AddEquipimentsCalibrationComponent } from './components/equipiments_calibration/add-equipiments-calibration/add-equipiments-calibration.component';
 import { EquipimentsCalibrationListComponent } from './components/equipiments_calibration/equipiments-calibration-list/equipiments-calibration-list.component';
 import { EditEquipimentsCalibrationComponent } from './components/equipiments_calibration/edit-equipiments-calibration/edit-equipiments-calibration.component';
+<<<<<<< HEAD
 import { ModalStartComponent } from './pages/start/modal-start/modal-start.component';
 import { AuthGuard } from './pages/home/auth.guard';
 import { AuthService } from './pages/home/auth.service';
@@ -124,6 +125,8 @@ import { TelefonePipe } from './components/clients/clients-list/telefone.pipe';
 import { DataPipe } from './components/services/services-list/data.pipe';
 import { FilterPipe } from './components/services/services-list/filter.pipe';
 
+=======
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
 @NgModule({
   declarations: [
     AppComponent,
@@ -189,6 +192,7 @@ import { FilterPipe } from './components/services/services-list/filter.pipe';
     AddEquipimentsCalibrationComponent,
     EquipimentsCalibrationListComponent,
     EditEquipimentsCalibrationComponent,
+<<<<<<< HEAD
     ModalStartComponent,
     OrderFormComponent,
     ModalOrderComponent,
@@ -197,6 +201,8 @@ import { FilterPipe } from './components/services/services-list/filter.pipe';
     TelefonePipe,
     DataPipe,
     FilterPipe,
+=======
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,19 @@
 export interface Clients {
   $key: string;
   nome: string;
+<<<<<<< HEAD
   cnpj: string;
   responsavel_empresa: string;
   responsavel_proseg: string;
   telefone_fixo: number;
   telefone1: string;
+=======
+  cnpj: number;
+  responsavel_empresa: string;
+  responsavel_proseg: string;
+  telefone_fixo: number;
+  telefone1: number;
+>>>>>>> d3f1f4f3fb7b35e762131298bc1ad545b27402e8
   telefone2: number;
   email: string;
   mensal: string;
